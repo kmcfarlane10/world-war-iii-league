@@ -8,7 +8,21 @@
 <p>12-Team Yahoo Fantasy Football League</p>
 </header>
 <nav>
-<a href="#rules">Rules</a><a href="#keepers">Keepers</a><a href="#deadlines">Deadlines</a><a href="#photos">Photos</a><a href="#history">Champions</a>
+<a href="#rules">Rules</a><a href="#keepers">Keepers</a><a href="#deadlines">Deadlines</a>
+<section id="deadlines">
+    <h2>Important Deadlines</h2>
+
+    <div class="highlight">
+        Keeper Submission Deadline: August 1
+    </div>
+
+    <section id="countdown">
+        <h2>⏰ Keeper Deadline Countdown</h2>
+        <div id="timer"></div>
+    </section>
+
+</section>
+<a href="#photos">Photos</a><a href="#history">Champions</a>
 </nav>
 <section id="rules"><h2>League Rules</h2>
 <ul><li>12 Teams</li><li>Yahoo Fantasy Football Platform</li><li>No player drafted in Round 1 or Round 2 may be kept.</li></ul>
@@ -23,4 +37,42 @@
 <section id="photos"><h2>League Gallery</h2><p>Add draft party, championship, and league event photos.</p></section>
 <section id="history"><h2>League Hall of Champions</h2><p>Add yearly champions and trophy history.</p></section>
 <footer>World War III Fantasy Football League</footer>
+  
+<script>
+const deadline = new Date("August 1, 2026 00:00:00").getTime();
+
+const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = deadline - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("timer").innerHTML =
+        days + " Days " +
+        hours + " Hours " +
+        minutes + " Minutes " +
+        seconds + " Seconds";
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML =
+            "KEEPER DEADLINE HAS PASSED";
+    }
+
+}, 1000);
+</script>
+
 </body></html>
