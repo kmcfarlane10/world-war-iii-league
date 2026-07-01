@@ -22,6 +22,11 @@
         <div id="timer"></div>
     </section>
 
+<section id="draft-countdown">
+    <h2>🏈 Draft Day Countdown</h2>
+    <div id="draftTimer"></div>
+</section>
+
 </section>
 <a href="#photos">Photos</a><a href="#history">Champions</a>
 </nav>
@@ -154,6 +159,43 @@ const timer = setInterval(function () {
         clearInterval(timer);
         document.getElementById("timer").innerHTML =
             "KEEPER DEADLINE HAS PASSED";
+    }
+
+}, 1000);
+</script>
+
+<script>
+const draftDate = new Date("August 22, 2026 12:00:00").getTime();
+
+const draftTimer = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = draftDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("draftTimer").innerHTML =
+        days + " Days " +
+        hours + " Hours " +
+        minutes + " Minutes " +
+        seconds + " Seconds";
+
+    if (distance < 0) {
+        clearInterval(draftTimer);
+        document.getElementById("draftTimer").innerHTML =
+            "DRAFT DAY IS HERE!";
     }
 
 }, 1000);
