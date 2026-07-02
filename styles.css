@@ -76,3 +76,15 @@ td:first-child {
     display: flex;
     align-items: center;
 }
+
+.team-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team-logo {
+    width: 32px;
+    height: 32px;
+}
