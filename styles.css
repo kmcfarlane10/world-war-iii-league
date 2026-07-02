@@ -121,9 +121,11 @@ td, th {
     text-align: center;
 }
 
+
 #weekly-preview,
 #video-archive,
-#media-center {
+#media-center,
+#intel-briefing {
     text-align: center;
 }
 
