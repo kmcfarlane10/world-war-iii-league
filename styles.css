@@ -193,3 +193,21 @@ iframe {
     border-bottom: 1px solid #333;
     padding: 6px 0;
 }
+
+#draft-center .draft-order li {
+    color: #fff !important;
+}
+
+.draft-card {
+    background: #111;
+    color: white;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.draft-card h3,
+.draft-card ol,
+.draft-card li {
+    color: white;
+}
