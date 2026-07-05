@@ -178,3 +178,18 @@ iframe {
     border-bottom: 1px solid #333;
     padding: 6px 0;
 }
+
+.draft-order {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #ffffff; /* Force white text */
+}
+
+.draft-order li {
+    color: #ffffff; /* Force white text */
+    border-bottom: 1px solid #333;
+    padding: 6px 0;
+}
