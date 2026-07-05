@@ -214,3 +214,9 @@ iframe {
 .draft-card li {
     color: white;
 }
+
+.draft-order,
+.draft-order li,
+.draft-order li::marker {
+    color: #ffffff !important;
+}
