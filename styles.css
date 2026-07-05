@@ -139,3 +139,42 @@ iframe {
 #intel-briefing p {
     color: inherit;
 }
+
+.draft-center {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.draft-center h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.draft-card {
+    background: #1a1a1a;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.draft-card h3 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.draft-order {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.draft-order li {
+    border-bottom: 1px solid #333;
+    padding: 6px 0;
+}
